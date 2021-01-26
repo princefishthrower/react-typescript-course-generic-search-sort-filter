@@ -1,14 +1,20 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import useDebounce from "../hooks/useDebounce";
+import genericSearch from "../utils/genericSearch";
+import PropsWithChildrenFunction from "./types/PropsWithChildrenFunction";
 
-export interface ISearchInputProps {
-  setSearchQuery: (searchQuery: string) => void;
+export interface ISearchInputProps<T> {
+  searchKeys: Array<keyof T>;
+  dataSource: Array<T>;
 }
 
-export function SearchInput(props: ISearchInputProps) {
-  const { setSearchQuery } = props;
+export function SearchInput<T>(
+  props: PropsWithChildrenFunction<ISearchInputProps<T>, T>
+) {
+  const { searchKeys, dataSource, children } = props;
   const [query, setQuery] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const debouncedQuery = useDebounce(query, 250);
 
   useEffect(() => {
@@ -30,6 +36,12 @@ export function SearchInput(props: ISearchInputProps) {
           setQuery(event.target.value);
         }}
       />
+      {children &&
+        dataSource
+          .filter((person) =>
+            genericSearch(person, searchKeys, searchQuery, false)
+          )
+          .map((widget) => children(widget))}
     </>
   );
 }
