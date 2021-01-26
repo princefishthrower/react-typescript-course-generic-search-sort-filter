@@ -1,9 +1,9 @@
 import * as React from "react";
-import IProperty from "../interfaces/IProperty";
+import ISorter from "../interfaces/ISorter";
 
 export interface ISortersProps<T> {
   object: T;
-  setProperty: (propertyType: IProperty<T>) => void;
+  setProperty: (propertyType: ISorter<T>) => void;
 }
 
 export function Sorters<T>(props: ISortersProps<T>) {

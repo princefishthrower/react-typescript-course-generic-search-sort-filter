@@ -1,7 +1,11 @@
-export default function genericFilter<T>(object: T, filterProperties: Array<keyof T>): boolean {
+import IFilter from "../interfaces/IFilter";
 
+export default function genericFilter<T>(object: T, filterProperties: Array<IFilter<T>>): boolean {
+
+    
     return filterProperties.every(filterProperty => {
-        return object[filterProperty] ? true : false;
+        const { property, isTruthySelected } = filterProperty;
+        return  isTruthySelected ? object[property] : !object[property];
     })
     
 }
