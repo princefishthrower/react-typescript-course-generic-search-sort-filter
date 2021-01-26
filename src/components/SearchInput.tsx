@@ -5,8 +5,8 @@ import genericSearch from "../utils/genericSearch";
 import PropsWithChildrenFunction from "./types/PropsWithChildrenFunction";
 
 export interface ISearchInputProps<T> {
-  searchKeys: Array<keyof T>;
   dataSource: Array<T>;
+  searchKeys: Array<keyof T>;
 }
 
 export function SearchInput<T>(

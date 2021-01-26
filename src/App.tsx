@@ -27,7 +27,7 @@ function App() {
           >
             {(widget) => <WidgetRenderer {...widget} />}
           </SearchInput>
-          <Sorters initialSortProperty="title" dataSource={widgets}>
+          <Sorters dataSource={widgets} initialSortProperty="title" >
             {(widget) => <WidgetRenderer {...widget} />}
           </Sorters>
           <Filters dataSource={widgets}>
@@ -44,7 +44,7 @@ function App() {
           >
             {(person) => <PeopleRenderer {...person} />}
           </SearchInput>
-          <Sorters initialSortProperty="firstName" dataSource={people}>
+          <Sorters dataSource={people} initialSortProperty="firstName" >
             {(person) => <PeopleRenderer {...person} />}
           </Sorters>
           <Filters dataSource={people}>

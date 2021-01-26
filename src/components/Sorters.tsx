@@ -12,7 +12,7 @@ export interface ISortersProps<T> {
 export function Sorters<T>(
   props: PropsWithChildrenFunction<ISortersProps<T>, T>
 ) {
-  const { dataSource, initialSortProperty, children } = props;
+  const { initialSortProperty, dataSource, children } = props;
   const [sortProperty, setSortProperty] = useState<ISorter<T>>({
     property: initialSortProperty,
     isDescending: true,
