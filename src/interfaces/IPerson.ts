@@ -3,4 +3,5 @@ export default interface IPerson {
     lastName: string;
     birthday: Date;
     eyeColor: string;
+    id: number;
 }

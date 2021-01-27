@@ -1,25 +1,23 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import useDebounce from "../hooks/useDebounce";
-import genericSearch from "../utils/genericSearch";
-import PropsWithChildrenFunction from "../types/PropsWithChildrenFunction";
 
-export interface ISearchInputProps<T> {
-  dataSource: Array<T>;
-  searchKeys: Array<keyof T>;
+export interface ISearchInputProps {
+  searchQuery: string;
+  setSearchQuery(searchQuery: string): void;
 }
 
-export function SearchInput<T>(
-  props: PropsWithChildrenFunction<ISearchInputProps<T>, T>
+export function SearchInput(
+  props: ISearchInputProps
 ) {
-  const { searchKeys, dataSource, children } = props;
-  const [query, setQuery] = useState<string>("");
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const { searchQuery, setSearchQuery } = props;
+  const [query, setQuery] = useState<string>(searchQuery);
   const debouncedQuery = useDebounce(query, 250);
 
   useEffect(() => {
     setSearchQuery(debouncedQuery);
-  }, [debouncedQuery, setSearchQuery]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedQuery]);
 
   return (
     <>
@@ -27,6 +25,7 @@ export function SearchInput<T>(
         Search! Try me!
       </label>
       <input
+        value={query}
         id="search"
         className="form-control full-width"
         type="search"
@@ -36,12 +35,6 @@ export function SearchInput<T>(
           setQuery(event.target.value);
         }}
       />
-      {children &&
-        dataSource
-          .filter((person) =>
-            genericSearch(person, searchKeys, searchQuery, false)
-          )
-          .map((widget) => children(widget))}
     </>
   );
 }

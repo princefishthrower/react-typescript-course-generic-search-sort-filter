@@ -1,20 +1,16 @@
 import * as React from "react";
-import { useState } from "react";
 import IFilter from "../interfaces/IFilter";
-import genericFilter from "../utils/genericFilter";
-import PropsWithChildrenFunction from "../types/PropsWithChildrenFunction";
 
 export interface IFiltersProps<T> {
   dataSource: Array<T>;
+  filterProperties: Array<IFilter<T>>;
+  setFilterProperties(filterProperties: Array<IFilter<T>>): void;
 }
 
 export function Filters<T>(
-  props: PropsWithChildrenFunction<IFiltersProps<T>, T>
+  props: IFiltersProps<T>
 ) {
-  const { dataSource, children } = props;
-  const [filterProperties, setFilterProperties] = useState<Array<IFilter<T>>>(
-    []
-  );
+  const { dataSource, filterProperties, setFilterProperties } = props;
   const object = dataSource.length > 0 ? dataSource[0] : {};
 
   const onChangeFilter = (property: IFilter<T>) => {
@@ -50,7 +46,7 @@ export function Filters<T>(
         <br />
         {Object.keys(object).map((key) => {
           return (
-            <>
+            <React.Fragment key={key}>
               <input
                 type="checkbox"
                 id={`${key}-true`}
@@ -86,14 +82,10 @@ export function Filters<T>(
               />
               <label htmlFor={`${key}-false`}>'{key}' is falsy</label>
               <br />
-            </>
+            </React.Fragment>
           );
         })}
       </div>
-      {children &&
-        dataSource
-          .filter((widget) => genericFilter(widget, filterProperties))
-          .map((widget) => children(widget))}
     </>
   );
 }

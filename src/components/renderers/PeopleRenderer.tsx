@@ -3,7 +3,7 @@ import Moment from "react-moment";
 import IPerson from "../../interfaces/IPerson";
 
 export function PeopleRenderer(props: IPerson) {
-  const { firstName, lastName, birthday, eyeColor } = props;
+  const { firstName, lastName, birthday, eyeColor, id } = props;
   return (
     <div className="col-12 p-3">
       <div className="card">
@@ -22,6 +22,9 @@ export function PeopleRenderer(props: IPerson) {
               </b>
             </li>
           </ul>
+        </div>
+        <div className="card-footer text-muted text-right">
+          <span className="float-left">ID: #{id}</span> 
         </div>
       </div>
     </div>

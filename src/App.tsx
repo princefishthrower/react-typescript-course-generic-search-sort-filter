@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import widgets from "./mock-data/widgets";
 import people from "./mock-data/people";
-import { SearchInput } from "./components/SearchInput";
-import { Sorters } from "./components/Sorters";
 import { WidgetRenderer } from "./components/renderers/WidgetRenderer";
 import { PeopleRenderer } from "./components/renderers/PeopleRenderer";
-import { Filters } from "./components/Filters";
+import { SearchSortAndFilter } from "./components/SearchSortAndFilter";
 
 function App() {
   const [showPeople, setShowPeople] = useState<boolean>(false);
@@ -19,38 +17,28 @@ function App() {
         {buttonText}
       </button>
       {!showPeople && (
-        <>
-          <h2>Widgets:</h2>
-          <SearchInput
-            dataSource={widgets}
-            searchKeys={["title", "description"]}
-          >
-            {(widget) => <WidgetRenderer {...widget} />}
-          </SearchInput>
-          <Sorters dataSource={widgets} initialSortProperty="title" >
-            {(widget) => <WidgetRenderer {...widget} />}
-          </Sorters>
-          <Filters dataSource={widgets}>
-            {(widget) => <WidgetRenderer {...widget} />}
-          </Filters>
-        </>
+        <SearchSortAndFilter
+          title="Widgets:"
+          dataSource={widgets}
+          searchProperties={["title", "description"]}
+          initialSortProperty={{ property: "title", isDescending: true }}
+          initialFilterProperties={[]}
+          initialSearchQuery="type"
+        >
+          {(widget) => <WidgetRenderer {...widget} key={widget.id}/>}
+        </SearchSortAndFilter>
       )}
       {showPeople && (
-        <>
-          <h2>People:</h2>
-          <SearchInput
-            dataSource={people}
-            searchKeys={["firstName", "lastName", "eyeColor"]}
-          >
-            {(person) => <PeopleRenderer {...person} />}
-          </SearchInput>
-          <Sorters dataSource={people} initialSortProperty="firstName" >
-            {(person) => <PeopleRenderer {...person} />}
-          </Sorters>
-          <Filters dataSource={people}>
-            {(person) => <PeopleRenderer {...person} />}
-          </Filters>
-        </>
+        <SearchSortAndFilter
+          title="People:"
+          dataSource={people}
+          searchProperties={["firstName", "lastName", "eyeColor"]}
+          initialSortProperty={{ property: "firstName", isDescending: true }}
+          initialFilterProperties={[]}
+          initialSearchQuery=""
+        >
+          {(person) => <PeopleRenderer {...person} key={person.id}/>}
+        </SearchSortAndFilter>
       )}
     </>
   );
