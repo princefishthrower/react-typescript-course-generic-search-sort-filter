@@ -8,7 +8,8 @@ const widgets: Array<IWidget> = [
         rating: 10,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "Title 2",
@@ -17,7 +18,8 @@ const widgets: Array<IWidget> = [
         rating: 7,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: true
+        isSpecialCard: true,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "Title Three",
@@ -26,7 +28,8 @@ const widgets: Array<IWidget> = [
         rating: 4,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "Title 4: I love generics",
@@ -35,7 +38,8 @@ const widgets: Array<IWidget> = [
         rating: 6,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "We also love TypeScript",
@@ -44,7 +48,8 @@ const widgets: Array<IWidget> = [
         rating: 10,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "X",
@@ -53,7 +58,8 @@ const widgets: Array<IWidget> = [
         rating: 10,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "Y",
@@ -62,7 +68,8 @@ const widgets: Array<IWidget> = [
         rating: 9,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "Z",
@@ -71,7 +78,8 @@ const widgets: Array<IWidget> = [
         rating: 1,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: true
+        isSpecialCard: true,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "A",
@@ -80,7 +88,8 @@ const widgets: Array<IWidget> = [
         rating: 6,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "B",
@@ -89,7 +98,8 @@ const widgets: Array<IWidget> = [
         rating: 0,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "C",
@@ -98,7 +108,8 @@ const widgets: Array<IWidget> = [
         rating: 3,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "",
@@ -107,7 +118,8 @@ const widgets: Array<IWidget> = [
         rating: 5,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
       {
         title: "I am the title. This card has an empty, i.e. 'falsy' description :(",
@@ -116,7 +128,8 @@ const widgets: Array<IWidget> = [
         rating: 5,
         created: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
         updated: new Date(+new Date() - Math.floor(Math.random() * 10000000000)),
-        isSpecialCard: false
+        isSpecialCard: false,
+        someFunction: () => console.log("hello world!")
       },
 ]
 

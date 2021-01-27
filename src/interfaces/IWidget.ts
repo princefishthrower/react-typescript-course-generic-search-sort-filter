@@ -6,4 +6,5 @@ export default interface IWidget {
     created: Date;
     updated: Date;
     isSpecialCard: boolean;
+    someFunction(): void;
 }
