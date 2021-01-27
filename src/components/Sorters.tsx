@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import ISorter from "../interfaces/ISorter";
 import genericSort from "../utils/genericSort";
-import PropsWithChildrenFunction from "./types/PropsWithChildrenFunction";
+import PropsWithChildrenFunction from "../types/PropsWithChildrenFunction";
 
 export interface ISortersProps<T> {
   dataSource: Array<T>;
