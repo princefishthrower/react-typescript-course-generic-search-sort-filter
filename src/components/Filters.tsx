@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import IFilter from "../interfaces/IFilter";
 import genericFilter from "../utils/genericFilter";
-import PropsWithChildrenFunction from "./types/PropsWithChildrenFunction";
+import PropsWithChildrenFunction from "../types/PropsWithChildrenFunction";
 
 export interface IFiltersProps<T> {
   dataSource: Array<T>;

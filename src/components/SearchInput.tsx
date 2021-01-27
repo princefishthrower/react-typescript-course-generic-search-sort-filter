@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import useDebounce from "../hooks/useDebounce";
 import genericSearch from "../utils/genericSearch";
-import PropsWithChildrenFunction from "./types/PropsWithChildrenFunction";
+import PropsWithChildrenFunction from "../types/PropsWithChildrenFunction";
 
 export interface ISearchInputProps<T> {
   dataSource: Array<T>;
