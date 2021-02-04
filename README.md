@@ -5,3 +5,5 @@ This is the code repository for my course "Advanced TypeScript: Generic Search, 
 A preview of the course (6 of the 19 lessons) is also available on [YouTube](https://www.youtube.com/playlist?list=PLOX_mQri1cCleaUEI_k2qDaWFpnA7wW0z).
 
 Note that each lesson branch corresponds to what was done in that lesson! 😄
+
+A final preview of the app we'll build throughout the course is [here on this repositories GitHub Pages site](https://princefishthrower.github.io/react-typescript-course-generic-search-sort-filter/).
