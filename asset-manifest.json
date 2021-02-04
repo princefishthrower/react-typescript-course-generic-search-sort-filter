@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-typescript-course-generic-search-sort-filter/static/css/main.f4a7a56e.chunk.css",
+    "main.js": "/react-typescript-course-generic-search-sort-filter/static/js/main.40d97608.chunk.js",
+    "main.js.map": "/react-typescript-course-generic-search-sort-filter/static/js/main.40d97608.chunk.js.map",
+    "runtime-main.js": "/react-typescript-course-generic-search-sort-filter/static/js/runtime-main.76dbeaad.js",
+    "runtime-main.js.map": "/react-typescript-course-generic-search-sort-filter/static/js/runtime-main.76dbeaad.js.map",
+    "static/css/2.658248ec.chunk.css": "/react-typescript-course-generic-search-sort-filter/static/css/2.658248ec.chunk.css",
+    "static/js/2.e47547e9.chunk.js": "/react-typescript-course-generic-search-sort-filter/static/js/2.e47547e9.chunk.js",
+    "static/js/2.e47547e9.chunk.js.map": "/react-typescript-course-generic-search-sort-filter/static/js/2.e47547e9.chunk.js.map",
+    "static/js/3.a9f5f3a3.chunk.js": "/react-typescript-course-generic-search-sort-filter/static/js/3.a9f5f3a3.chunk.js",
+    "static/js/3.a9f5f3a3.chunk.js.map": "/react-typescript-course-generic-search-sort-filter/static/js/3.a9f5f3a3.chunk.js.map",
+    "index.html": "/react-typescript-course-generic-search-sort-filter/index.html",
+    "static/css/2.658248ec.chunk.css.map": "/react-typescript-course-generic-search-sort-filter/static/css/2.658248ec.chunk.css.map",
+    "static/css/main.f4a7a56e.chunk.css.map": "/react-typescript-course-generic-search-sort-filter/static/css/main.f4a7a56e.chunk.css.map",
+    "static/js/2.e47547e9.chunk.js.LICENSE.txt": "/react-typescript-course-generic-search-sort-filter/static/js/2.e47547e9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76dbeaad.js",
+    "static/css/2.658248ec.chunk.css",
+    "static/js/2.e47547e9.chunk.js",
+    "static/css/main.f4a7a56e.chunk.css",
+    "static/js/main.40d97608.chunk.js"
+  ]
+}
