@@ -1,6 +1,6 @@
 # Advanced TypeScript: Generic Search, Sorting and Filtering
 
-This is the code repository for my course "Advanced TypeScript: Generic Search, Sorting and Filtering", available on [Skillshare](https://www.skillshare.com/classes/Advanced-TypeScript-Generic-Search-Sorting-and-Filtering/1458010668/projects) and [Udemy](https://www.udemy.com/course/draft/3822500/?referralCode=22441D8B6B06045473D2).
+This is the code repository for my course "Advanced TypeScript: Generic Search, Sorting and Filtering", available on [Skillshare](https://skl.sh/3oGQMbr) and [Udemy](https://www.udemy.com/course/advanced-typescript-generic-search-sorting-and-filtering/?referralCode=22441D8B6B06045473D2).
 
 A preview of the course (6 of the 19 lessons) is also available on [YouTube](https://www.youtube.com/playlist?list=PLOX_mQri1cCleaUEI_k2qDaWFpnA7wW0z).
 
