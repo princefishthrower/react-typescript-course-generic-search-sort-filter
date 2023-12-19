@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export interface ISortersProps<T> {
-  object: T;
+  object: T extends {} ? T : never;
   setProperty: (property: keyof T) => void;
 }
 
